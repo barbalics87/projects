@@ -62,7 +62,7 @@ ggplot(EUnuts.sf) +
       "Source: Eurostat, ", gisco_attributions(),
       "\nBased on Milos Popovic: https://milospopovic.net/how-to-make-choropleth-map-in-r/"
     )
-  )
+  )+
 scale_fill_manual(
   name = "GDP per country",
   values = pal,
