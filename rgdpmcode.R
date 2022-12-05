@@ -12,7 +12,6 @@ citation("eurostat")
 #HICP - "prc_hicp_aind", eu_countries$code, "2021-01-01", "INX_A_AVG", "CP00", "HICP per country", c(0, 5, 10, 15, 20, 25, 30, 40, 50, 60)
 #function - dat: adat amit felhasználunk, fg: ország filter, ft: időszak filt, fu: unit filt, fi: item filt, title: plot megnevezése, breaksf: értékek felosztása  
 
-
 EUmape <- function(dat, fg, ft, fu, fi, title, breaksf){
   if (missing(fi)){
     eudata <- get_eurostat(dat) %>% filter(geo %in% fg & time == ft, unit == fu) %>% select(geo, values)
