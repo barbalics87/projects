@@ -8,7 +8,7 @@ citation("eurostat")
 #GiscoR - https://doi.org/10.5281/zenodo.4317946, https://ropengov.github.io/giscoR/
 #Adat segédlet: GDP - "nama_10_gdp", eu_countries$code, "2021-01-01", "CP_MEUR", "B1GQ", "GDP per country", c(0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 4000000, 5000000, 6000000)
 #GDP per capita: "nama_10_pc", eu_countries$code, "20**-01-01", "CP_EUR_HAB", "B1GQ", "GDP per capita", c(0, 10000, 20000, 40000, 60000, 80000, 100000, 120000, 140000, 160000)
-#GNI - "nama_10_pp", eu_countries$code, "20**-01-01", "CP_PPS_EU27_2020_HAB", "GNI per capita PPS", c(0, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000)
+#GNI - "nama_10_pp", eu_countries$code, "20**-01-01", "CP_PPS_EU27_2020_HAB", "GNI per capita PPS", c(0, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 60000)
 #HICP - "prc_hicp_aind", eu_countries$code, "2021-01-01", "INX_A_AVG", "CP00", "HICP per country", c(0, 5, 10, 15, 20, 25, 30, 40, 50, 60)
 #function - dat: adat amit felhasználunk, fg: ország filter, ft: időszak filt, fu: unit filt, fi: item filt, title: plot megnevezése, breaksf: értékek felosztása  
 
@@ -114,4 +114,7 @@ EUmape <- function(dat, fg, ft, fu, fi, title, breaksf){
     )
 }
 
-EUmape("nama_10_pp", eu_countries$code, "2020-01-01", "CP_PPS_EU27_2020_HAB", , "GNI per capita PPS", c(0, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000))
+EUmape("nama_10_gdp", eu_countries$code, "2021-01-01", "CP_MEUR", "B1GQ", "GDP per country", c(0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 4000000, 5000000, 6000000))
+EUmape("nama_10_pc", eu_countries$code, "2021-01-01", "CP_EUR_HAB", "B1GQ", "GDP per capita", c(0, 10000, 20000, 40000, 60000, 80000, 100000, 120000, 140000, 160000))
+EUmape("nama_10_pp", eu_countries$code, "2020-01-01", "CP_PPS_EU27_2020_HAB", , "GNI per capita PPS", c(0, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 60000))
+EUmape("prc_hicp_aind", eu_countries$code, "2021-01-01", "INX_A_AVG", "CP00", "HICP per country", c(0, 100, 105, 110, 113, 115, 120, 125, 150, 250))
